@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,today } from "react";
 import FormDetails from "./FormDetails";
 import FormConfirm from "./FormConfirm";
 import FormSucces from "./FormSucces";
@@ -14,10 +14,11 @@ class UserForm extends Component {
       score: "",
       description: "",
       timeCreated: "",
-      timeModified: "",
-      helpfulness: "",
       
     };
+  }
+  state={
+    curTime : new Date().toLocaleString(),
   }
 
   nextStep = () => {
@@ -39,15 +40,14 @@ class UserForm extends Component {
 
   addFormDetails = (e, data) => {
     e.preventDefault();
-    let d = data.timeCreated.substr(0,10);
+    var today = new Date();
+    let d = this.state.curTime
     let h = data.timeModified.substr(11);
     this.setState({
       userName: data.userName,
       score: data.score,
       description: data.description,
       timeCreated: d,
-      timeModified: h,
-      helpfulness: data.helpfulness,
     });
   };
 
@@ -63,17 +63,14 @@ class UserForm extends Component {
       userName ,
       score ,
       description ,
-      timeCreated ,
-      timeModified ,
-      helpfulness ,
+      timeCreated,
     } = this.state;
     const values = {
       userName ,
       score ,
       description ,
-      timeCreated ,
-      timeModified ,
-      helpfulness ,
+      timeCreated,
+      
     };
     switch (step) {
       case 1:
