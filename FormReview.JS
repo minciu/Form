@@ -60,22 +60,20 @@ class UserForm extends Component {
   render() {
     const { step } = this.state;
     const {
-      userFirstName,
-      userLastName,
-      email,
-      phoneNumber,
-      reservationDate,
-      hour,
-      numberOfSeats,
+      userName ,
+      score ,
+      description ,
+      timeCreated ,
+      timeModified ,
+      helpfulness ,
     } = this.state;
     const values = {
-      userFirstName,
-      userLastName,
-      email,
-      phoneNumber,
-      reservationDate,
-      hour,
-      numberOfSeats,
+      userName ,
+      score ,
+      description ,
+      timeCreated ,
+      timeModified ,
+      helpfulness ,
     };
     switch (step) {
       case 1:
