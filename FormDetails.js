@@ -1,18 +1,10 @@
 import React, { Component } from "react";
 //import { useState } from "react";
-import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
-//import DatePicker from "react-datepicker";
-//import "react-datepicker/dist/react-datepicker.css";
 
-/*const ReactCalendar = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  return (
-    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-  );
-};*/
 
 class FormDetails extends Component {
   constructor(props) {
@@ -55,27 +47,13 @@ class FormDetails extends Component {
             />
           </Form.Group>
           </Form.Row>
-          <Form.Row>
-          <Form.Group as={Col} controlId="description">
-            <Form.Label>Description</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Description"
-              value={values.description}
-              name="description"
-              onChange={handleChange("description")}
-              required
-            />
-          </Form.Group>
-
-         
-        </Form.Row>
+          
         <Form.Row>
           <Form.Group as={Col} controlId="score">
             <Form.Label>Score</Form.Label>
             <Form.Control
               type="number"
-              placeholder="Smail"
+              placeholder="From 1 to 10"
               value={values.score}
               name="score"
               onChange={handleChange("score")}
@@ -83,55 +61,34 @@ class FormDetails extends Component {
             />
           </Form.Group>
 
-      
-        </Form.Row>
-        <Form.Row>
-          <Form.Group as={Col} controlId="timeCreated">
-            <Form.Label>Date</Form.Label>
+          </Form.Row>
+        
+          
+          <Form.Group controlId="description">
+            <Form.Label>Description</Form.Label>
             <Form.Control
-              type="date"
-              placeholder="Date"
-              value={values.timeCreated}
-              name="timeCreated"
-              onChange={handleChange("timeCreated")}
+              as="textarea"
+              type="text"
+              placeholder="Description"
+              value={values.description}
+              name="description"
+              rows="5"
+              onChange={handleChange("description")}
               required
             />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="timeModified">
-            <Form.Label>Date</Form.Label>
-            <Form.Control
-              type="date"
-              placeholder="Date"
-              value={values.timeModified}
-              name="timeModified"
-              onChange={handleChange("timeModified")}
-              required
-            />
-          </Form.Group>
-        </Form.Row>
-        <Form.Row>
-
-        <Form.Group as={Col} controlId="helpfulness">
-            <Form.Label>Help</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="Help"
-              value={values.helpfulness}
-              name="helpfulness"
-              onChange={handleChange("helpfulness")}
-              required
-            />
-          </Form.Group>
-        </Form.Row>
-
+         
+        
+         
+          
         <Button
           onClick={this.handleClick}
           variant="primary"
           type="submit"
           style={styles.button}
         >
-          Continue
+          Submit
         </Button>
       </Form>
     );
@@ -140,8 +97,8 @@ class FormDetails extends Component {
 
 const styles = {
   button: {
-    backgroundColor: "#A71D31",
-    color: "#F7E7D9",
+    backgroundColor: "f7ead9",
+    color: "#f7d9f0",
     border: "none",
     marginRight: "1vw",
     marginTop: "2vh",
