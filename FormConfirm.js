@@ -83,10 +83,11 @@ class FormConfirm extends Component {
       <div>
         <Card.Title style={styles.text}>Confirm reservation data</Card.Title>
         <ListGroup className="list-group-flush" style={styles.text}>
+        <ListGroup.Item> Name: {userName}</ListGroup.Item>
           <ListGroup.Item>Score: {score}</ListGroup.Item>
           <ListGroup.Item>Description: {description}</ListGroup.Item>
-          <ListGroup.Item>TimeCreated: {timeCreated}</ListGroup.Item>
-          <ListGroup.Item> Name: {userName}</ListGroup.Item>
+        
+          
         </ListGroup>
         <Button
           onClick={event => {
