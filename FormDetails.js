@@ -51,14 +51,25 @@ class FormDetails extends Component {
         <Form.Row>
           <Form.Group as={Col} controlId="score">
             <Form.Label>Score</Form.Label>
-            <Form.Control
-              type="number"
-              placeholder="From 1 to 10"
-              value={values.score}
-              name="score"
-              onChange={handleChange("score")}
-              required
-            />
+            <Form.Control as="select" 
+             type="number"
+             placeholder="From 1 to 10"
+             value={values.score}
+             name="score"
+             onChange={handleChange("score")}
+             required
+            >
+            <option>0.5</option>
+      <option>1</option>
+      <option>1.5</option>
+      <option>2</option>
+      <option>2.5</option>
+      <option>3</option>
+      <option>3.5</option>
+      <option>4</option>
+      <option>4.5</option>
+      <option>5</option>
+    </Form.Control>
           </Form.Group>
 
           </Form.Row>
@@ -108,3 +119,5 @@ const styles = {
 };
 
 export default FormDetails;
+ 
+
