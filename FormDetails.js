@@ -85,7 +85,7 @@ class FormDetails extends Component {
               name="description"
               rows="5"
               onChange={handleChange("description")}
-              required
+              
             />
           </Form.Group>
 
